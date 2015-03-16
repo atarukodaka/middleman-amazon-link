@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Middleman::AmazonLink::VERSION
   spec.authors       = ["Ataru Kodaka"]
   spec.email         = ["ataru.kodaka@gmail.com"]
-  spec.summary       = %q{Write a short summary. Required.}
-  spec.description   = %q{Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Middleman Extention for amazon-link.}
+  spec.description   = %q{helprs provided such as amazon(asin, :detail)}
+  spec.homepage      = "http://github.com/atarukodaka/middleman-amazon-link"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

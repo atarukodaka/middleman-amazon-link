@@ -22,7 +22,8 @@ module Middleman
         ecs_opt = {
           associate_tag: amazon_opts.associate_tag,
           AWS_access_key_id: amazon_opts.aws_access_key_id,
-          AWS_secret_key: amazon_opts.aws_secret_key
+          AWS_secret_key: amazon_opts.aws_secret_key,
+          country: amazon_opts.country,
         }
         opt = {
           use_cache: amazon_opts.use_cache,
