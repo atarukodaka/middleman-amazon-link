@@ -1,3 +1,5 @@
+require 'middleman-amazon-link/ecs_wrapper'
+
 module Middleman
   module AmazonLink
     module Helpers
