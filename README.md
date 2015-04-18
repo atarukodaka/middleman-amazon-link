@@ -25,11 +25,11 @@ extension that generates links to amazon on products specified.
   ```ruby
   # config.rb
   activate :amazon_link do |amazon|
-    amazon.aws_access_key_id = "xxxx"
+    amazon.associate_tag = "xxxx-22"
+	amazon.aws_access_key_id = "xxxx"
     amazon.aws_secret_key = "xxx"
 
     # optional below
-    amazon.associate_tag = "xxxx-22"
     amazon.country = "jp"
     amazon.use_cache = true
     amazon.cache_dir = ".cache/amazon"

@@ -1,9 +1,12 @@
 language: ruby
-
 rvm:
-  - 2.0.0
-  - 2.2
-
-script: "bundle exec rake test"
-
-env: TEST=true
+- 2.0.0
+- 2.2
+script: bundle exec rake test
+env:
+  matrix:
+  - TEST=true
+  global:
+  - secure: NFAAe8UGi2lm5b2Xg1qoKwqw+vNFAKKzkJdHP7biTqietI6hqZhI1TBycHZ8xBESZtN07AsFy3oTuLNj9S4ESstxncOzJM4beI5BJjlBwGDxoyrqFXn1FTpzp382M3YBv4MWmetRCSC6CXdAhJV2muhoBAm+aLt7dr8PyDsAJAc=
+  - secure: Y01Smkurjpoe0AzVTbFCW9y94vyLfUKIN7eHHGAnFlg9EG4028BOJOyKY43qOYyJLbOzDxJEo65kzbu5Io1Ezje90qgtr/lJIylirY8rEqOXQbcit1DW97XuilWn38DMHbeoqZ7tkslWIbDlGMy7GhHS9MkNg2eUOT888gGxPAI=
+  - secure: bJ58QDr0MJ4CNgC2prqxAOMVY9LoxOhM6OwG5Eb7Rog9chyMHw+2H3ocuOdoV/N9TuKCdP26HYZSpfgJinqecN2+ToXL1ThualpJjkI881oWW8bQbR2eOrYrbdLq38Vv5VTEc+XCLJibtlvQ9+RnBQSs943/LiJdgEX8accKl9Y=
