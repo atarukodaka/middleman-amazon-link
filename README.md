@@ -1,7 +1,10 @@
-[![Gem Version](http://img.shields.io/gem/v/middleman-amazon-link.svg?style=flat)](gem)
+[![Gem Version](https://badge.fury.io/rb/middleman-amazon-link.svg)](http://badge.fury.io/rb/middleman-amazon-link)
 [![Build Status](https://travis-ci.org/atarukodaka/middleman-amazon-link.svg)](https://travis-ci.org/atarukodaka/middleman-amazon-link)
-[![Coverage Status](https://coveralls.io/repos/atarukodaka/middleman-amazon-link/badge.svg)](https://coveralls.io/r/atarukodaka/middleman-amazon-link)
+[![Coverage Status](https://coveralls.io/repos/atarukodaka/middleman-amazon-link/badge.svg?branch=master)](https://coveralls.io/r/atarukodaka/middleman-amazon-link?branch=master)
 [![Code Climate](https://codeclimate.com/github/atarukodaka/middleman-amazon-link/badges/gpa.svg)](https://codeclimate.com/github/atarukodaka/middleman-amazon-link)
+
+
+
 
 
 # middleman-amazon-link
