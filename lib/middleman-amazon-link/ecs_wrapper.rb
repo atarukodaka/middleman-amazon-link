@@ -1,3 +1,5 @@
+require 'amazon/ecs'
+        
 module Middleman
   module AmazonLink
     class EcsLookupWrapper
@@ -65,6 +67,9 @@ module Middleman
         Marshal.load(File.read(cache_filename(asin)))
       end
       def save_cache(asin, hash)
+        dir = File.dirname(cache_filename(asin))
+        require 'fileutils'
+        FileUtils.mkdir_p(dir) unless File.exists?(dir)
         File.open(cache_filename(asin), 'wb'){|f| f.write(Marshal.dump(hash))}
       end
     end

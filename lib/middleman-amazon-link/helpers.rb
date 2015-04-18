@@ -16,8 +16,6 @@ module Middleman
 </div>)
       }
       def amazon(asin, type_or_string = :detail)
-        #binding.pry
-
         amazon_opts = amazon_link_settings
         ecs_opt = {
           associate_tag: amazon_opts.associate_tag,
@@ -29,8 +27,9 @@ module Middleman
           use_cache: amazon_opts.use_cache,
           cache_dir: amazon_opts.cache_dir
         }
+        binding.pry
         amazon_lookup = Middleman::AmazonLink::EcsLookupWrapper.new(ecs_opt, opt)
-        hash =  amazon_lookup.item_lookup(asin)
+        hash =  amazon_lookup.item_lookup(asin) || {}
         
         if block_given?
           yield(hash)
