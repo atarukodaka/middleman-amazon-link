@@ -27,7 +27,6 @@ module Middleman
           use_cache: amazon_opts.use_cache,
           cache_dir: amazon_opts.cache_dir
         }
-        binding.pry
         amazon_lookup = Middleman::AmazonLink::EcsLookupWrapper.new(ecs_opt, opt)
         hash =  amazon_lookup.item_lookup(asin) || {}
         
