@@ -10,13 +10,21 @@ module Middleman
 
       option :use_cache, true, 'use cache or not'
       option :cache_dir, './caches/amazon', 'directory for caches'
+
+      option :register_templates, {}
       
       def initialize(app, options_hash = {}, &block)
         super
         app.set :amazon_link_settings, options
+
+        options.register_templates.each do |type, template|
+          Middleman::AmazonLink::Helpers.register_template(type, template)
+        end
       end
       helpers do
         include Middleman::AmazonLink::Helpers
+      end
+      def after_configuration
       end
     end
   end

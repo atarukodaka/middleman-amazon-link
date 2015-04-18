@@ -3,7 +3,7 @@ require 'middleman-amazon-link/ecs_wrapper'
 module Middleman
   module AmazonLink
     module Helpers
-      @@templates = {
+      Templates = {        
         title: %Q{<span><a href="%{title}" target="_blank">%{title}</a></span>},
         detail:
         %(
@@ -15,7 +15,13 @@ module Middleman
   </div>
 </div>)
       }
-      def amazon(asin, type_or_string = :detail)
+      class << self
+        def register_template(type, template)
+          Templates[type] = template
+        end
+      end
+      ################
+      def amazon(asin, template_type = :detail)
         amazon_opts = amazon_link_settings
         ecs_opt = {
           associate_tag: amazon_opts.associate_tag,
@@ -34,8 +40,9 @@ module Middleman
         if block_given?
           yield(hash)
         else
-          template = (type_or_string.class == Symbol) ? @@templates[type_or_string] : type_or_string
+          #template = (type_or_string.class == Symbol) ? @@templates[type_or_string] : type_or_string
           #or raise "no such template type: '#{type}'"
+          template = Templates[template_type]
           template % hash
         end
       end
