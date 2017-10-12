@@ -22,7 +22,7 @@ module Middleman
       end
       ################
       def amazon(asin, template_type = :detail)
-        amazon_opts = amazon_link_settings
+        amazon_opts = config[:amazon_link_settings]
         ecs_opt = {
           associate_tag: amazon_opts.associate_tag,
           AWS_access_key_id: amazon_opts.aws_access_key_id,

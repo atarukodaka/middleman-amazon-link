@@ -15,7 +15,8 @@ module Middleman
       
       def initialize(app, options_hash = {}, &block)
         super
-        app.set :amazon_link_settings, options
+        #app.set :amazon_link_settings, options
+        app.config[:amazon_link_settings] = options
 
         options.register_templates.each do |type, template|
           Middleman::AmazonLink::Helpers.register_template(type, template)
